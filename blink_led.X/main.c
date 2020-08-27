@@ -31,16 +31,17 @@ void main(void) {
     uint16_t delay = 100;
 
     while (1) {
-        if (PORTAbits.RA0 == 1) {
-            delay = delay + 1;
-        }
+        //        if (PORTAbits.RA0 == 1) {
+        //            delay = delay + 1;
+        //        }
 
-        if (PORTAbits.RA1 == 1) {
-            delay = delay - 1;
-        }
+        //        if (PORTAbits.RA1 == 1) {
+        //            delay = delay - 1;
+        //        }
 
         LATAbits.LA2 = ~LATAbits.LA2;
-        _delay_(delay);
+        __delay_ms(500);
+        //        _delay_(delay);
 
     }
 
